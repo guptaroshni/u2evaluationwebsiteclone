@@ -1,0 +1,182 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* styling the top box contaioning image */
+#comp_Image{
+    border-bottom: 1px solid rgb(204,204,204);
+    width: 72%;
+    height: 70px;
+    margin: auto;
+    display: flex;
+    padding: 5px;
+}
+#comp_Image>div{
+    width: 20%;
+    margin: auto;
+    margin-left: 40%;
+}
+#comp_Image img{
+    width: 90%;
+}
+#comp_Image p{
+    color: rgb(120,153,73);
+    font-size: 12px;
+    display: flex;
+    align-items: flex-end;
+}
+/* styling the fedex image div */
+.fedex-image-div{
+    width: 72%;
+    display: flex;
+    margin: auto;
+    margin-top: 20px;
+    /* padding: 5px; */
+    align-items: center;
+}
+.fedex-image-div img{
+    width: 12.5%;
+    height: 34px;
+}
+.fedex-image-div>div{
+    margin-left: 2%;
+    padding-top: 10px;
+}
+.fedex-image-div>div>p{
+    font-size: 12px;
+    font-weight: 600;
+    line-height: 2px;
+}
+/* styling the address box */
+#addressBox{
+    /* border: 1px solid black; */
+    /* height: 600px; */
+    width: 65%;
+    margin: auto;
+    margin-top: 30px;
+    /* padding: 5px; */
+}
+#addressBox>a{
+    color: black;
+    font-weight: 600;
+    font-size: 12px;
+    padding-left: 10px;
+}
+#userInfo{
+    /* border: 1px solid teal; */
+    height: 100%;
+    width: 50%;
+    margin-top: 5px;
+}
+#userInfo>div{
+    /* height: 5%; */
+    border: 1px solid rgb(204,204,204);
+    background-color: beige;
+    font-size: 12px;
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+tbody .bold-text{
+    font-weight: 600;
+}
+table{
+    border-spacing: 10px;
+    border: 1px solid rgb(204,204,204);
+    width: 100%;
+    font-size: 12px;
+}
+tbody>tr>td:first-child{
+    padding-right:100px;
+}
+/* styling the shipping method */
+#shippingMethod{
+    width: 65%;
+    height: 200px;
+    margin: auto;
+    margin-top: 30px;
+    /* border: 1px solid teal; */
+    font-size: 12px;
+}
+#shippingMethod .shipping-method-text , #confirmOrderBox .confirm-order-text , #paymentInfo .payment-text{
+    height: 17%;
+    background-color: beige;
+    border: 2px solid rgb(204,204,204);
+    font-weight: 700;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+}
+#shippingMethod input{
+    margin-top: 10px;
+    /* margin-bottom: 30px; */
+    margin-right: 20px;
+}
+#shippingMethod p{
+    color: #00C928;
+    padding-left: 42px;
+}
+/* styling the confirm order box */
+#confirmOrderBox{
+    width: 65%;
+    height: 200px;
+    margin: auto;
+    margin-top: 30px;
+    /* border: 1px solid teal; */
+    font-size: 12px;
+}
+/* styling the payment info box */
+#paymentInfo{
+    width: 65%;
+    height: 200px;
+    margin: auto;
+    /* margin-top: 10px; */
+    /* border: 1px solid teal; */
+    font-size: 12px;
+    margin-bottom: 50px;
+}
+#paymentInfo .payment-images{
+    padding: 5px;
+}
+#paymentInfo .card-image{
+    height: 30px;
+}
+/* styline place order box */
+#placeOrder{
+/* border: 1px solid red; */
+height: 200px;
+display: flex;
+justify-content: space-between;
+margin-top: 20px;
+}
+#placeOrder > div:first-child{
+height: 40%;
+/* border: 1px solid blue; */
+width: 68%;
+font-size: 11px;
+line-height: 5px;
+}
+#placeOrder span{
+font-weight: 700;
+text-decoration: underline;
+cursor: pointer;
+}
+#placeOrder > div:last-child{
+width: 20%;
+/* border: 1px solid blue; */
+height: 40%;
+display: flex;
+align-items: flex-start;
+justify-content: end;
+}
+#placeOrder button{
+padding: 5px 10px;
+background-color: rgb(129,165,85);
+border: none;
+color: #fff;
+font-weight: 600;
+border-radius: 3px;
+font-size: 15px;
+cursor: pointer;
+}

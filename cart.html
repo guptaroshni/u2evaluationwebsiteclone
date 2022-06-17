@@ -1,0 +1,938 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./footer.css">
+    <link rel="stylesheet" href="./navbar.css">
+    <link rel="icon" type="image/x-icon" href="https://media.glassdoor.com/sqll/14907/overstock-com-squarelogo-1529535998697.png">
+   
+   
+    <style>
+#main{
+    display: flex;
+    justify-content:center;
+    gap: 20px;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue",
+     Helvetica, Arial, "Lucida Grande", sans-serif;
+     margin-top: 50px;
+}
+#totalDiv>div{
+    width:300px;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+    /* box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px, rgba(60, 64, 67, 0.15) 0px 1px 3px 1px; */
+    margin-top: 30px;
+}
+#itemDiv{
+    display: flex;
+    margin-right: 50px;
+}
+#redMe{
+    font-size: 18px;
+    color: red;
+}
+#total_savings{
+    font-size: 18px;
+    color: red;
+    text-align: center;
+}
+#checkout{
+    background-color:wheat;
+}#art{
+    font-size: 22px;
+}
+#imgDiv{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+#itemDiv{
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+#totalDiv{
+    position: -webkit-sticky; /* Safari */
+  position: sticky;
+  height: 450px;
+  top: 0;
+    width: 500px;
+    margin-top: 50px;
+    box-shadow: rgba(9, 30, 66, 0.25) 0px 1px 1px, rgba(9, 30, 66, 0.13) 0px 0px 1px 1px;
+}
+#promoCdoe{
+    color: teal;
+}#image1{
+    padding-right: 50px;
+}#checkout{
+    font-size: 22px;
+    font: bold;
+    background-color:black;
+    height: 50px;
+    width: 200px;
+    margin: auto;
+    color:white;
+}#checkout_btn{
+    justify-content: center;
+}
+#apply{
+    background-color:rgb(189, 236, 236);
+}
+#input{
+    height: 30px;
+}
+ #saveRemove{
+display: flex;
+justify-content:center;
+margin: auto;
+}
+#remove{
+    height: 30px;
+    width: 70px;
+   background-color: rgb(177, 231, 231);
+   color: black;
+   font: bold;
+   margin-right: 20px;
+}
+#save{
+    height: 30px;
+    width: 70px;
+   background-color: rgb(177, 231, 231);
+   color: black;
+   font: bold;
+   margin-right: 50%;
+}
+#info{
+    justify-content: space-evenly;
+}
+
+#footer{
+    margin-top: 30px;
+}
+    </style>
+</head>
+<body>
+    <div id="head">
+        
+        <div class="navbar"> 
+            <!-- logo  -->
+            <img src="https://logos-download.com/wp-content/uploads/2017/01/Overstock_logo.png" class="logo" alt="">
+            <!-- search bar -->
+            <div class="search-box">
+                <input type="text" class="search-bar" placeholder="Search">
+                <!-- search icon -->
+                <button class="search-btn"><img src="https://cdn-icons-png.flaticon.com/512/622/622669.png" width="18px" height="26px" onclick="get()"></button>
+
+
+            </div>
+            <div class="nav-right">
+                <div id="account">
+                    <a href="./signup.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/747/747376.png" width="30px" height="20px" class="icon" alt="">
+                    <div id="acc">Account</div></a>
+                    </div>
+                
+
+                <div id="account1">
+                    <img src="https://cdn-icons-png.flaticon.com/512/860/860808.png" width="30px" height="20px" class="icon" alt="">
+                    <div id="acc1">Lists</div>
+
+                </div>
+
+                <div id="account2">
+                    <a href="cart.html">
+                    <img src="https://cdn-icons-png.flaticon.com/512/1170/1170678.png" width="30px" height="20px" class="icon" alt="">
+                    <div id="acc2">Cart</div></a>
+
+                </div>
+
+                
+            </div>
+        </div>
+       
+  
+    <nav>
+        <div class="wrapper">
+            <ul class="links">
+                <li>
+                    <a href="#">Furniture</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Rugs</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <header>Living Room Furniture</header> 
+                              <ul class="mega-links">
+                                 <li><a href="#">Sofas & Couches</a></li>
+                                 <li><a href="#">Sectional</a></li>
+                                 <li><a href="#">Benches</a></li>
+                                 <li><a href="#">Ottomans & Poufs</a></li>
+                                 <li><a href="#">Accent Chairs</a></li>
+                                 <li><a href="#">Recliners</a></li>
+                                 <li><a href="#">Coffee & Accent Tables</a></li>
+                                 <li><a href="#">TV Stands</a></li>
+                              </ul>
+                             </div>
+                             <div class="row">
+                                 <header>Bedroom Furniture</header> 
+                              <ul class="mega-links">
+                                  <li><a href="#">Beds</a></li>
+                                  <li><a href="#">Bedroom Sets</a></li>
+                                  <li><a href="#">Headboards</a></li>
+                                  <li><a href="#">Bed Frames</a></li>
+                                  <li><a href="#">Dressers & Chests</a></li>
+                              </ul>
+                              </div>
+                              <div class="row">
+                                 <header>Dining, Kitchen & Bar</header> 
+                              <ul class="mega-links">
+                                  <li><a href="#">KItchen & Dining Sets</a></li>
+                                  <li><a href="#">KItchen & Dining Tables</a></li>
+                                  <li><a href="#">KItchen & Dining Chairs</a></li>
+                                  <li><a href="#">Bar Tables</a></li>
+                                  <li><a href="#">Home Bar</a></li>
+                              </ul>
+                              </div>
+                           
+                        </div>
+                    </div>
+                </li>
+                <li>
+                    <a href="#">Decor</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                                <header>Living Room Furniture</header> 
+                              <ul class="mega-links">
+                                 <li><a href="#">Sofas & Couches</a></li>
+                                 <li><a href="#">Sectional</a></li>
+                                 <li><a href="#">Benches</a></li>
+                                 <li><a href="#">Ottomans & Poufs</a></li>
+                                 <li><a href="#">Accent Chairs</a></li>
+                                 <li><a href="#">Recliners</a></li>
+                                 <li><a href="#">Coffee & Accent Tables</a></li>
+                                 <li><a href="#">TV Stands</a></li>
+                              </ul>
+                             </div>
+                             <div class="row">
+                                 <header>Bedroom Furniture</header> 
+                              <ul class="mega-links">
+                                  <li><a href="#">Beds</a></li>
+                                  <li><a href="#">Bedroom Sets</a></li>
+                                  <li><a href="#">Headboards</a></li>
+                                  <li><a href="#">Bed Frames</a></li>
+                                  <li><a href="#">Dressers & Chests</a></li>
+                              </ul>
+                              </div>
+                              <div class="row">
+                                 <header>Dining, Kitchen & Bar</header> 
+                              <ul class="mega-links">
+                                  <li><a href="#">KItchen & Dining Sets</a></li>
+                                  <li><a href="#">KItchen & Dining Tables</a></li>
+                                  <li><a href="#">KItchen & Dining Chairs</a></li>
+                                  <li><a href="#">Bar Tables</a></li>
+                                  <li><a href="#">Home Bar</a></li>
+                              </ul>
+                              </div>
+                           
+                           
+                        </div>
+                    </div>
+                </li>
+                <li><a href="#">Bedding</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+                
+                
+                <li><a href="#">Home Improvement</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="#">Kitchen</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+                
+
+                <li><a href="#">Outdoor</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+                
+                </li>
+                <li><a href="#">Lighting</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="#">Kids & Baby</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="#">More</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+                
+                <li><a href="ideas.html">Ideas</a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+                </li>
+               
+                <li><a href="#" style="color: red; "> Sales & Deals  </a>
+                    <div class="mega-box">
+                        <div class="content">
+                            <div class="row">
+                               <header>Living Room Furniture</header> 
+                             <ul class="mega-links">
+                                <li><a href="#">Sofas & Couches</a></li>
+                                <li><a href="#">Sectional</a></li>
+                                <li><a href="#">Benches</a></li>
+                                <li><a href="#">Ottomans & Poufs</a></li>
+                                <li><a href="#">Accent Chairs</a></li>
+                                <li><a href="#">Recliners</a></li>
+                                <li><a href="#">Coffee & Accent Tables</a></li>
+                                <li><a href="#">TV Stands</a></li>
+                             </ul>
+                            </div>
+                            <div class="row">
+                                <header>Bedroom Furniture</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">Beds</a></li>
+                                 <li><a href="#">Bedroom Sets</a></li>
+                                 <li><a href="#">Headboards</a></li>
+                                 <li><a href="#">Bed Frames</a></li>
+                                 <li><a href="#">Dressers & Chests</a></li>
+                             </ul>
+                             </div>
+                             <div class="row">
+                                <header>Dining, Kitchen & Bar</header> 
+                             <ul class="mega-links">
+                                 <li><a href="#">KItchen & Dining Sets</a></li>
+                                 <li><a href="#">KItchen & Dining Tables</a></li>
+                                 <li><a href="#">KItchen & Dining Chairs</a></li>
+                                 <li><a href="#">Bar Tables</a></li>
+                                 <li><a href="#">Home Bar</a></li>
+                             </ul>
+                             </div>
+                        </div>
+                    </div>
+                </li>
+            
+            <!-- <button id="cart"><a href="#"><i class="fa-solid fa-cart-shopping"></i> MY CART</a></button> -->
+        </ul>
+        </div>
+    </nav>  
+</div>
+    <div id="nav"></div>
+    <div id="main">
+        <div id="cart"><p>Shoping Cart</p></div>
+        <div id="totalDiv">
+            <div >
+<!------------------------------------- All billing  ------------------------------------------------------->
+                <h4>(</h4>  <h4 id="qty"></h4>  <h4>)</h4>  <h4>Items &nbsp -  &nbsp ₹ &nbsp;</h4>
+                <h4 id="total">₹</h4>
+            </div>
+            <div>
+                <h4>Promotional Savings&nbsp-&nbsp; ₹ &nbsp; </h4>
+                <h4 id="total_savings">0</h4>
+            </div>
+            <div>
+                <h4>Total Sum After Discount&nbsp-&nbsp;₹ &nbsp;</h4>
+                <h4 id="subtotal"></h4>
+            </div>
+            <div>
+                <h2 id="total_price_text">Your Total&nbsp-&nbsp  ₹ &nbsp;</h2>
+                <h2 id="total_price">₹</h2>
+            </div>
+            <div id="input"><input type="text" id="promo" placeholder="Write Coupon Code"><button id="apply"><b id="pressApply"></b>Apply</button></div>
+            <div id="discount_coupon">
+                <p>Apply <b id="promoCdoe">&nbspRAV20&nbsp</b> to get <b id="promoCdoe">&nbsp20%&nbsp</b> discount</p>
+                <div id="right_mark"></div>
+            </div>
+            <div id="checkout_btn">
+                <i class="fa-solid fa-lock"></i>
+                <h1 id="checkoutText"><button id="checkout" onclick="window.location.href='../checkout.html'">checkout</button></h1>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer"></div>
+    <div id="upper_foot">
+        <div>
+            <h5>My Account</h5>
+            <p>Orders & Return</p>
+            <p>Email Preferences</p>
+            <p>Account Settings</p>
+        </div>
+        <div>
+            <h5>LET US HELP</h5>
+            <p>Contact Customer Care</p>
+            <p>Shipping Information</p>
+            <p>Return Policy</p>
+            <p>International Help</p>
+            <p>Accessibility</p>
+        </div>
+        <div>
+            <h5>COMPANY INFORMATION</h5>
+            <p>About Overstock™</p>
+            <p>Contact Us</p>
+            <p>Careers</p>
+            <p>Investor Relations</p>
+            <p>Sell Your Products</p>
+            <p>Supply Chain Transparency</p>
+        </div>
+        <div>
+            <h5>MORE WAYS TO SHOP</h5>
+            <p>Tips & Ideas</p>
+            <p>Deals</p>
+            <p>Clearance</p>
+            <p>New Arrivals</p>
+        </div>
+    </div>
+    <div id="lower_foot">
+        <div id="left">© Copyright 2022, Overstock.com®, Inc.<br>
+            799 Coliseum Way Midvale, UT 84047 | 1-800-843-2446</div>
+        <div id="right">
+            <p>Privacy Policy</p>
+            <p>Terms & Conditions</p>
+            <p>*Promotion Terms</p>
+            <p>Ship to:<p><img src="https://ak1.ostkcdn.com/img/mxc/intFlag_IN.gif" /></p></p>
+        </div>
+    </div>`
+</body>
+</html>
+<script>
+
+
+let q=JSON.parse(localStorage.getItem("quantity")) || 1;
+    //---------------------------------sample data-------------------------
+    // let arr =[{
+    //     name : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
+    //     category: "Sofa",
+    //     price : 41500,
+    //     rating: 4,
+    //     imgSrc : "https://ak1.ostkcdn.com/images/products/is/images/direct/47c9ae93df558cc6a7214693e20c3b81a9dd4523/Futzca-Convertible-Sectional-Sofa-Couch-with-Reversible-Chaise%2C-Modern-Linen-Fabric-L-Shaped-Couch-for-Small-Space.jpg?imwidth=480&impolicy=medium"
+    // },
+    // {
+    //     name : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
+    //     category: "Sofa",
+    //     price : 41500,
+    //     rating: 4,
+    //     imgSrc : "https://ak1.ostkcdn.com/images/products/is/images/direct/47c9ae93df558cc6a7214693e20c3b81a9dd4523/Futzca-Convertible-Sectional-Sofa-Couch-with-Reversible-Chaise%2C-Modern-Linen-Fabric-L-Shaped-Couch-for-Small-Space.jpg?imwidth=480&impolicy=medium"
+    // },
+    // {
+    //     name : "Futzca Modern L-shaped Compact Convertible Sectional Sofa w/ Reversible Chaise",
+    //     category: "Sofa",
+    //     price : 41500,
+    //     rating: 4,
+    //     imgSrc : "https://ak1.ostkcdn.com/images/products/is/images/direct/47c9ae93df558cc6a7214693e20c3b81a9dd4523/Futzca-Convertible-Sectional-Sofa-Couch-with-Reversible-Chaise%2C-Modern-Linen-Fabric-L-Shaped-Couch-for-Small-Space.jpg?imwidth=480&impolicy=medium"
+    // }]
+    // localStorage.setItem(("cartItem"),JSON.stringify(arr))
+    let data= JSON.parse(localStorage.getItem("cartitems"))
+    console.log(data)
+    let array=[];
+    array.push(data)
+    console.log(array);
+            // A.Creation B.Giving contents C. Appending D.Appending
+    function showData(){
+        array.map(function(elem,index){
+            let imgdiv = document.createElement("div")
+            //imgdiv.setAttribute("id","imgDiv")
+            let infodiv = document.createElement("div")
+            infodiv.setAttribute("id","info")
+             let saveRemove = document.createElement("div")
+            saveRemove.setAttribute("id","saveRemove")
+            let remove= document.createElement("button")
+            remove.innerText="Remove"
+            remove.setAttribute("id","remove")
+            remove.addEventListener("click",function(elem,index)
+            {
+            //    remove1(elem,index)
+            array.splice(index,1)
+            localStorage.removeItem("cartItem")
+            
+            })
+            let save = document.createElement("button")
+            save.innerText="Save"
+            save.setAttribute("id","save")
+            let div1 =document.createElement("div")
+            div1.setAttribute("id","itemDiv")
+            let n = document.createElement("p")
+            n.innerText=elem.name
+            let c = document.createElement("p")
+            c.innerText= elem.category
+            let p = document.createElement("p")
+            p.innerText="₹"+ elem.price
+            p.setAttribute("id","redMe")
+            let i = document.createElement("img")
+            i.setAttribute("id","image1")
+            i.src=elem.imgSrc
+            
+            var qty = document.createElement("p")
+            qty.innerText = "Quantity:"+q;
+            qty.setAttribute("id","qtyid")
+            var div=document.createElement("div")
+            var p1=document.createElement("button")
+            p1.innerText="Add"
+
+        
+            // Addinfg event to get sum --------------------------------------------------------------------
+
+            let total;
+
+            p1.addEventListener("click",function(){   
+              q++;
+              document.querySelector("#qty").innerText = q;
+             document.querySelector("#qtyid").innerText="Quantity:"+q;
+             total=elem.price*q
+
+             document.querySelector("#total").innerText = total;
+             document.querySelector("#total_price").innerText=total;
+
+            
+            })
+            var p3=document.createElement("button")
+            p3.innerText="Reduce"
+            // Addinfg event to get sum -----------------------------------------------------------------------------
+            p3.addEventListener("click",function(){
+                
+            
+            q--
+            document.querySelector("#qty").innerText = q;
+            document.querySelector("#qtyid").innerText="Quantity:"+q;
+
+            total=elem.price*q
+
+             document.querySelector("#total").innerText = total;
+
+             document.querySelector("#total_price").innerText=total;
+
+           
+            })
+            //imgdiv.append(i)
+            div.append(p1,qty,p3)
+            saveRemove.append(save,remove)
+            infodiv.append(n,c,p,div,saveRemove)
+            div1.append(i,infodiv)
+            document.querySelector("#cart").append(div1)
+        })
+    }
+             //---------------------------Item count++----------------------
+             function sumofquntity(i){
+            q++;
+            localStorage.setItem("cartItem",JSON.stringify(data))
+            showData(data)
+            Total()
+            }
+            //---------------------------Item count(- ve)----------------
+             function subofquntity(i){
+            q--;
+            localStorage.setItem("cartItem",JSON.stringify(array))
+            Total()
+            }
+            //--------------------Finding Total Price------------------------------------
+            function Total(){
+                var total = array.reduce(function(acc,el){
+                return el.price*q
+                },0)
+             document.querySelector("#total").innerText = total;
+            }
+            Total()
+            //----------------Items count---------------------------------------------
+            function quantity(){
+             document.querySelector("#qty").innerText = q;
+             
+            }
+             // RAVTJ20 disocunt logic--------------------------------------------------------------------
+            // Apply button submit and done --------------------------------------------------------
+            document.querySelector("#apply").addEventListener("click",function(){
+                //apply()
+            var total = document.getElementById("total").innerText
+            var promo = document.getElementById("promo").value
+            var discount =0
+            if(promo=="RAV20"){
+                discount=Number(total)*0.2
+                discount=Math.trunc(discount)
+                document.getElementById("total_savings").innerText = Number(discount);
+                document.getElementById("total_price").innerText = Number(total)-Number(discount);
+                document.getElementById("subtotal").innerText = Number(total)-Number(discount);
+            }else{
+                 document.getElementById("total_savings").innerText=Number(total)
+                apply()
+                Total()
+            }
+            })
+            // Fina price to pay after  all discounts--------------------------------------------
+             quantity()
+             function finalprice(){
+                 var total = document.getElementById("total").innerText
+                 var promo = document.getElementById("promo").value
+                 var discount =0
+                    if(promo==="RAV20"){
+                         discount=Number(total)*0.2
+                         //let final_amount =  Number(total)-Number(discount);
+                         document.getElementById("total_price").innerText =Number(total)-Number(discount);
+                         localStorage.setItem('final_price',Number(total)-Number(discount))
+                        console.log("hi2")
+                    }else{
+                        document.getElementById("total_price").innerText=Number(total)
+                        localStorage.setItem('final_price',Number(total))
+                       console.log("hi1")
+                    }
+               console.log("hi")
+            }
+            finalprice()
+            showData(array)
+//  function remove1(elem,index){
+// data.splice(index,1)
+// console.log(data)
+// localStorage.setItem("cartItem", JSON.stringify(data))
+// showData()
+// Total()
+// }
+
+
+// function remove1(elem,index){
+//        array.splice(index,1)
+             
+//                showData(array)
+//                console.log(array)
+//                localStorage.setItem("cartItems", JSON.stringify(array))
+//             showData(array)
+          
+//             //    localStorage.removeItem("cartItem")
+//             // location.reload(true)
+                 
+
+
+// }
+
+
+console.log(q)
+</script>
+
+

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Validation</title>
+    <link rel="stylesheet" href="./otp.css">
+</head>
+<body>
+    <div id="container">
+        <div id="header">
+            <p>Validate OTP (ONE TIME PASSCODE)</p>
+        </div>
+        <div id="content">
+            <p>An OTP(ONE TIME PASSCODE) has been sent to your phone number.Please enter the OTP in the field below</p>
+            <input type="password" id="otp_num" placeholder="Enter OTP">
+            <button onclick="submitOTP()">Submit</button>
+            <p id="timer"></p>
+        </div>
+    </div>
+</body>
+</html>
+
+<script src="./otp.js"></script>

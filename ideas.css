@@ -1,0 +1,192 @@
+/* top div styling */
+#topTipDiv{
+    -webkit-tap-highlight-color: rgba(0,0,0,0);
+    font: 12px/20px "Helvetica Neue",Helvetica,Arial,sans-serif;
+    word-wrap: break-word;
+    color: #626669;
+    line-height: 1.6875em;
+    font-weight: 400;
+    font-size: 14px;
+    box-sizing: border-box;
+    margin-top: 30px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    height: 350px;
+    background: #ddd;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    width: 100%;
+    text-align: center;
+    position: relative;
+    background-image: url(https://guides.overstock.com/wp-content/uploads/2021/12/Tips-and-Ideas-Hero-W22.png);
+}
+
+/* mid div styling */
+#clickData{
+    display: flex;
+    margin: auto;
+    width: 90%;
+    /* border: 1px solid yellow; */
+    text-align: center;
+}
+
+#clickData > div{
+    margin-top: 40px;
+    width: 25%;
+    /* border: 1px solid blue; */
+}
+#clickData > div > h3 >button{
+    border: 0px;
+    background-color: white;
+    font-weight: bold;
+}
+
+.iconsTop{
+    margin: auto;
+    width: 30%;
+}
+#searchBar{
+    width: 40%;
+    height: 30px;
+    margin: auto;
+    margin-top: 7%;
+    padding-top: 10px;
+    border: 1px solid lightgray;
+}
+#mag{
+    width: 60px;
+    /* height: 30px; */
+    background-color: white;
+    border: 0px;
+}
+#decortext{
+    border: 0px ;
+    width : 87%
+}
+
+
+
+
+/* lower div styling */
+#lowerTipDiv{
+    /* border: 2px solid black; */
+    margin: auto;
+    display: grid;
+    width: 85%;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(2,750px);
+    border-bottom: 1px solid lightgray;
+}
+.mainPic{
+    display: flex;
+    margin: auto;
+}
+.mainPic > img{
+    margin: auto;
+    width: 90%;
+    height: 60%;
+    border-radius: 50%;
+}
+.icons{
+    display: flex;
+    margin: auto;
+    margin: auto;
+    margin-top: 10px;
+    width: 20%;
+}
+#lowerTipDiv > div{
+    margin: auto;
+    width: 95%;
+    text-align: center;
+    /* border: 1px solid blue; */
+}
+#lowerTipDiv > div > p{
+    color: gray;
+}
+#lineDiv{
+    margin: auto;
+    width: 30%;
+    height: 2px;
+    margin-bottom: -10px;
+    background-color: gray;
+}
+
+
+
+
+/* slideshow css */
+
+.slider{
+	max-width: 70%;
+	/* border:10px solid  #29a8e2; */
+	margin:80px auto;
+	position: relative;
+	overflow: hidden;
+}
+
+.slider .left-slide,.slider .right-slide{
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  background-color: #444444;
+  border-radius: 50%;
+  color:#ffffff;
+  font-size: 20px;
+  top:50%;
+  cursor: pointer;
+  margin-top: -20px;
+  text-align: center;
+  line-height: 40px;
+  
+}
+.slider .left-slide:hover,.slider .right-slide:hover{
+ box-shadow: 0px 0px 10px black;
+ background-color: #29a8e2;
+}
+
+.slider .left-slide{
+	left: 30px;
+}
+.slider .right-slide{
+	right: 30px;
+}
+.slider .slider-items .item img{
+	max-width: 100%;
+	display: block;
+	animation:zoom 1s ease;
+}
+
+@keyframes zoom{
+	0%{transform: scale(2);opacity: 0}
+	50%{transform: scale(2);}
+	100%{transform: scale(1);opacity:1}
+}
+.slider .slider-items .item{
+	display: none;
+	position: relative;
+}
+.slider .slider-items .item .caption{
+position: absolute;
+width: 100%;
+height: 60px;
+bottom: 0px;
+left: 0px;
+background-color: rgba(0,0,0,.5);
+line-height: 60px;
+text-align: center;
+color: #ffffff;
+font-size: 30px;
+
+}
+
+.slider .slider-items .item.active{
+	display: block;
+}
+
+
+#foot{
+    margin-top: 30px;
+}

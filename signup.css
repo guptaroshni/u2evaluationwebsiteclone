@@ -1,0 +1,158 @@
+*{
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+/* styling the main container containing signup and login boxes */
+#jarvis{
+   
+    margin-top: 30px;
+}
+#accContainer{
+    height: 600px;
+    width: 58%;
+    /* border: 1px solid black; */
+    margin: auto;
+    display: flex;
+    justify-content: space-around;
+}
+#accContainer h1{
+    color: rgb(68,68,68);
+    font-size: 20px;
+    letter-spacing: .5px;
+    line-height: 26px;
+    margin-bottom: 50px;
+}
+#accContainer .form-partition-line{
+    border: 1px dotted grey;
+    height: 70%;
+    display: flex;
+    align-self: center;
+}
+/* styling the signup form */
+#signupBox{
+    height: 100%;
+    width: 40%;
+    /* border: 1px solid red; */
+}
+.inside-form-flex-div{
+    height: 85px;
+    /* border: 1px solid teal; */
+    display: flex;
+    justify-content: space-between;
+}
+/* .inside-form-flex-div>div{
+    border: 1px solid green; 
+    padding: 5px; 
+} */
+.inside-form-flex-div>div:first-child{
+    width: 45%;
+}
+.inside-form-flex-div>div:last-child{
+    width: 45%;
+}
+#signupForm label , #loginForm label{
+    color: rgb(68,68,68);
+    font-size: 14px;
+}
+#signupBox input , #loginBox input{
+    padding: 7px;
+    margin: 15px 0px 20px 0px
+}
+#signupBox .password{
+    width: 100%;
+}
+#email , .login-email-input{
+    width: 100%;
+}
+.inside-signup-checkbox{
+    height: 70px;
+    width: 100%;
+    /* border: 1px solid yellow; */
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+#signupForm .inside-signup-checkbox label{
+    font-size: 12px;
+    margin-bottom: 0px;
+    margin-left: 1%;
+    line-height: 15px;
+    letter-spacing: .5px;
+}
+#signupForm .submit-signup-form , #loginForm .submit-login-form{
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 20px;
+    background-color: #0272A2;
+    border: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 4px;
+}
+#signupForm .submit-signup-form + input{
+    background-color: #fff;
+    color: rgb(68,68,68);
+    border: 1px solid grey;
+}
+#signupForm .submit-signup-form:hover{
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-color: #055172;
+}
+#signupForm .submit-signup-form + input:hover{
+    cursor: pointer;
+    transition: all .2s ease-in-out;
+    background-color: #fff;
+}
+#signupBox p{
+    font-size: 12px;
+    text-align: center;
+    color: rgb(68,68,68);
+    line-height: 18px;
+}
+#signupBox a{
+    color: rgb(68,68,68);
+    font-weight: bold;
+    /* line-height: 15px; */
+}
+/* styling login form */
+#loginBox{
+    height: 100%;
+    width: 40%;
+    /* border: 1px solid teal; */
+}
+#loginForm .password{
+    width: 100%;
+}
+#loginForm .submit-login-form{
+    background-color: rgb(39,134,95);
+}
+#loginForm .submit-login-form:hover{
+    cursor: pointer;
+    background-color: rgb(26, 90, 63);
+    transition: all .2s ease-in-out;
+}
+#loginForm a{
+    color: #0272a2;
+    font-size: 12px;
+    font-weight: 700;
+    display: block;
+    text-align: center;
+}
+/* styling the footer of the account page */
+#accountsFooter{
+    /* border: 1px solid red; */
+    font-size: 12px;
+    color: rgb(68,68,68);
+    padding: 10px;
+    width: 74%;
+    margin: auto;
+    margin-top: 30px;
+    line-height: 7px;
+}
+#accountsFooter p{
+    cursor: pointer;
+    /* border: 1px solid blue; */
+    margin-top: 10px;
+}
